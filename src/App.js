@@ -6,7 +6,7 @@ function App() {
 		<div className="App">
 			HELLO WORLD
 			<h3>I'M THE WHATSAPP CLONE</h3>
-			<h3></h3>
+			<h3>AND YOU CAN ALWAYS REACH ME HERE</h3>
 		</div>
 	);
 }
