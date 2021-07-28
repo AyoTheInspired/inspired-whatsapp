@@ -1,0 +1,21 @@
+:root {
+	/* TRANSITIONS */
+	--sht-trans: all 200ms ease-in-out;
+	--med-trans: all 0.5s ease-in-out;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.flexed {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-col {
+	display: flex;
+	flex-direction: column;
+}
