@@ -6,6 +6,10 @@
 	transition: var(--sht-trans);
 }
 
+.room__active:active {
+	background-color: #ebebeb !important;
+}
+
 .sidebarChat:hover {
 	background-color: #ebebeb;
 }
