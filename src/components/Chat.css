@@ -50,6 +50,7 @@
 .chat__timestamp {
 	margin-left: 10px;
 	font-size: xx-small;
+	font-weight: 700;
 }
 
 .chat__headerRight {

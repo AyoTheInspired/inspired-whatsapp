@@ -32,7 +32,7 @@ function Sidebar() {
 	return (
 		<Wrap className="sidebar">
 			<div className="sidebar__header">
-				<Avatar />
+				<Avatar src={user?.photoURL} />
 				<div className="sidebar__headerRight">
 					<IconButton>
 						<DonutLargeIcon />
