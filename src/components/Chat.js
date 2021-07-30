@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Avatar, IconButton } from "@material-ui/core";
+import styled from "styled-components";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import SearchOutlinedIcon from "@material-ui/icons/SearchOutlined";
 import AttachFileIcon from "@material-ui/icons/AttachFile";
@@ -52,7 +53,7 @@ function Chat() {
 	};
 
 	return (
-		<div className="chat">
+		<Wrap className="chat">
 			<div className="chat__header">
 				<Avatar src={`https://avatars.dicebear.com/api/human/${seed}.svg`} />
 				<div className="chat__headerInfo">
@@ -110,8 +111,15 @@ function Chat() {
 				</form>
 				<MicIcon />
 			</div>
-		</div>
+		</Wrap>
 	);
 }
 
 export default Chat;
+
+const Wrap = styled.div`
+	@media (max-width: 768px) {
+		flex: 1;
+		border-top: 7px solid green;
+	}
+`;

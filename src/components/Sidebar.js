@@ -67,4 +67,10 @@ function Sidebar() {
 
 export default Sidebar;
 
-const Wrap = styled.div``;
+const Wrap = styled.div`
+	@media (max-width: 768px) {
+		width: 100% !important;
+		flex: 1;
+		align-items: center;
+	}
+`;

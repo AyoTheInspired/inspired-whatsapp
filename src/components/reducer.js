@@ -1,9 +1,9 @@
 export const initialState = {
 	user: null,
-	rooms: ["fifty", "hundred", "mettle", "shards"],
 };
 export const actionTypes = {
 	SET_USER: "SET_USER",
+	LOGOUT_USER: "LOGOUT_USER",
 };
 
 const reducer = (state, action) => {
@@ -14,6 +14,9 @@ const reducer = (state, action) => {
 				...state,
 				user: action.user,
 			};
+
+		case actionTypes.LOGOUT_USER:
+			return initialState;
 
 		default:
 			return state;
