@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from "react";
 import db from "../firebase";
 import "./SidebarChat.css";
-import { Avatar } from "@material-ui/core";
+import { Avatar, IconButton } from "@material-ui/core";
 import { NavLink } from "react-router-dom";
+import DeleteForeverIcon from "@material-ui/icons/DeleteForever";
+import { useStateValue } from "../StateProvider";
 
 function SidebarChat({ id, name, addNewChat }) {
 	const [seed, setSeed] = useState("");
 	const [messages, setMessages] = useState("");
+	const [{ rooms }, dispatch] = useStateValue();
 
 	useEffect(() => {
 		if (id) {
@@ -35,6 +38,11 @@ function SidebarChat({ id, name, addNewChat }) {
 		}
 	};
 
+	// const deleteChat = (name) => {
+	// 	console.log(rooms);
+	// 	db.collection("rooms").doc().delete();
+	// };
+
 	return !addNewChat ? (
 		<NavLink to={`/rooms/${id}`} activeClassName="room__active">
 			<div className="sidebarChat">
@@ -43,6 +51,11 @@ function SidebarChat({ id, name, addNewChat }) {
 					<h2> {name} </h2>
 					<p> {messages[0]?.message} </p>
 				</div>
+				{/* <div className="delete__wrapper" onClick={deleteChat(name)}>
+					<IconButton>
+						<DeleteForeverIcon />
+					</IconButton>
+				</div> */}
 			</div>
 		</NavLink>
 	) : (

@@ -24,6 +24,24 @@ h2 {
 	margin-bottom: 8px;
 }
 
+.delete__icon {
+	margin-left: 50px;
+}
+
 .sidebarChat__info {
 	margin-left: 15px;
+}
+
+.delete__wrapper {
+	margin-left: auto;
+	background-color: red;
+}
+
+.delete__wrapper .MuiSvgIcon-root {
+	font-size: 25px;
+	transition: var(--sht-trans);
+}
+
+.delete__wrapper .MuiSvgIcon-root:hover {
+	transform: scale(1.2);
 }

@@ -1,5 +1,6 @@
 export const initialState = {
 	user: null,
+	rooms: ["fifty", "hundred", "mettle", "shards"],
 };
 export const actionTypes = {
 	SET_USER: "SET_USER",
